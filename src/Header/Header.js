@@ -1,5 +1,6 @@
 import React from 'react';
 import { Nav , Navbar} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
    return (
@@ -11,7 +12,7 @@ const Header = () => {
                 <Nav className="ms-auto">
                     <Nav.Link className="me-3 header-tex" href="#home">Home</Nav.Link>
                     <Nav.Link className="me-3 header-tex" href="#link">About</Nav.Link>
-                    <Nav.Link className="me-3 header-tex" href="#link">Reservation</Nav.Link>
+                    <Nav.Link className="me-3 header-tex" as={Link} to="/reservation">Reservation</Nav.Link>
                     <Nav.Link className="me-3 header-tex" href="#link">Menu</Nav.Link>
                     <Nav.Link className="me-3 header-tex" href="#link">Gallery</Nav.Link>
                     <Nav.Link className="me-3 header-tex" href="#link">Blog</Nav.Link>

@@ -61,5 +61,10 @@
   flex-wrap: wrap;
   justify-content:center
 }
-
+.reservation-text{
+  font-family: 'Times New Roman', Times, serif;
+}
+.reserv-section{
+  background-color:#F6F6F6;
+}
 

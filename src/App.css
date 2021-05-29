@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+.header-container{
+  height:600px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.h1-sizing{
+  font-size:80px;
+  font-family: 'Times New Roman', Times, serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.margin-button{
+  margin-bottom: 250px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.input-size{
+  padding: 10px;
+}
+.color-change{
+  background-color: #FFFFFF;
+}
+.button-class{
+  border: none;
+  padding: 12px 25px;
+  background-color:#8B755A;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.button-class:hover{
+  border: 2px solid #8B755A;
+  background-color: white;
+  color:#8B755A;
+}
+.font-change{
+  font-family: 'Times New Roman', Times, serif;
+}
+.section-color{
+  background-color:white;
+}
+.header-tex{
+  font-weight: 400 !important;
+  font-size: 20px !important;
+  color: black !important;
+  font-family: 'Times New Roman', Times, serif !important;
+}
+.shanG{
+  font-size:39px;
+  font-weight:500;
+  font-family: 'Times New Roman', Times, serif !important;
+}
+.home-container{
+  background-color:#ebd8c5;
+}
+.img-res-fluid{
+  width: 90px;
+  height:90px;
+  border-radius:80px;
+}
+.review-color{
+  background-color:#f5f0ec;
+}
+.review-p{
+  font-family: 'Times New Roman', Times, serif;
+}
+.d-flex-res{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+

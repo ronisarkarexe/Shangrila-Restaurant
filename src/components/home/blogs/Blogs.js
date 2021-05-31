@@ -1,40 +1,18 @@
 import React from 'react';
 import './Blogs.css';
-import newsOne from '../../../images/news-1.jpg';
-import newsTwo from '../../../images/news-2.jpg';
-import newsThree from '../../../images/news-3.jpg';
+
 import BlogDetail from '../BlogDetail/BlogDetail';
+import { connect } from 'react-redux';
 
 
-const blogData = [
-    {
-        img: newsOne,
-        title : 'Ingredients For Pasta',
-        date : '10 June 2016 by Peter Parker',
-        description : 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, placeat totam laborum maiores, esse assumenda porro error natus sit ipsam.        ',
-        
-        
-    },
-    {
-        img: newsTwo,
-        title : 'The Best Tips For Tasty Food',
-        date : '10 June 2016 by Peter Parker',
-        description : 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, placeat totam laborum maiores, esse assumenda porro error natus sit ipsam.        ',
-        
-        
-    },
-    {
-        img: newsThree,
-        title : 'Your Weeknight Dinner Plan',
-        date : '10 June 2016 by Peter Parker',
-        description : 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, placeat totam laborum maiores, esse assumenda porro error natus sit ipsam.        ',
-        
-        
+
+const mapStateToProps = (state) => {
+    return {
+        Blogs: state.blogData
     }
-    
-]
-
-const Blogs = () => {
+}
+const Blogs = (props) => {
+    console.log('from blog',props);
     return (
         <section className="blog pb-5">
             <div className="container">
@@ -44,7 +22,7 @@ const Blogs = () => {
                 </div>
                 <div className="row mt-5">                   
                         {
-                            blogData.map(blog=> <BlogDetail blog={blog} key={blog.title}></BlogDetail>)
+                            props.Blogs.map(blog=> <BlogDetail blog={blog} key={blog.title}></BlogDetail>)
                         }
                 </div>
             </div>
@@ -52,4 +30,4 @@ const Blogs = () => {
     );
 };
 
-export default Blogs;
+export default connect(mapStateToProps) (Blogs);

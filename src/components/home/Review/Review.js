@@ -3,28 +3,26 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import iron from "../../../Image By Roni/irene-strong.png"
-const Reviews = [
-   {
-      img: iron,
-      title: 'Roni Sarkar',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-   },
-   {
-      img: iron,
-      title: 'Roni Sarkar',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-   },
-   {
-      img: iron,
-      title: 'Roni Sarkar',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-   },
-   {
-      img: iron,
-      title: 'Roni Sarkar',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+import { connect } from 'react-redux';
+
+
+const mapStateToProps = (state) => {
+   return {
+      review: state.reviewsDat
    }
-]
+}
+
+
+ 
+ // `connect` returns a new function that accepts the component to wrap:
+//  const connectToStore = connect(mapStateToProps)
+//  // and that function returns the connected, wrapper component:
+//  const ConnectedComponent = connectToStore(Component)
+ 
+//  // We normally do both in one step, like this:
+//  connect(mapStateToProps)(Component)
+
+
 
 class Review extends Component {
    render() {
@@ -35,6 +33,7 @@ class Review extends Component {
        slidesToShow: 1,
        slidesToScroll: 1
      };
+     console.log('from review', this.props);
 
      return (
        <section className="review-color">
@@ -42,7 +41,7 @@ class Review extends Component {
          <h2 className="text-center review-p mt-5 pt-5">Testimonials</h2>
          <Slider {...settings}>
             {
-               Reviews.map(review => {
+               this.props.review.map(review => {
                   return(
                   <div className="container mb-5 text-center">
                      <img class="img-fluid mx-auto mb-5 mt-5 img-res-fluid" src={review.img} alt="" />
@@ -59,4 +58,4 @@ class Review extends Component {
    }
  }
 
- export default Review;
+ export default connect(mapStateToProps) (Review);

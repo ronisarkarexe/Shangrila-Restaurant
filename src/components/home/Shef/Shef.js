@@ -6,7 +6,7 @@ import shef3 from "../../../images/shef-3.jpg";
 const Shef = () => {
   return (
     <div>
-      <h2 class="text-center">Our Delicious</h2>
+      <h2 class="text-center">Our Shef</h2>
       <div class=" d-flex justify-content-center">
         <div
           id="carouselExampleFade"

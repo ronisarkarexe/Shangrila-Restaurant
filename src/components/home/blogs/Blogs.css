@@ -1,0 +1,25 @@
+.titleText{
+    color: #232323;
+    font-size: 42px;
+    font-weight: 400;
+    text-align: center;
+}
+.p-text {
+    width: 550px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.blogContent{
+    width: 100%;
+}
+.blogContent img{
+    margin-top: 30px;
+}
+.blogContent h4{
+    margin-top: 30px;
+}
+
+.blogContent h5{
+    margin-top: 30px;
+}

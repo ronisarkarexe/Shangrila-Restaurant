@@ -1,0 +1,42 @@
+.footer{
+    background-color: #191919;
+    color: white;
+}
+.footer-title {
+    margin-bottom: 25px;
+}
+.footer-title h3 {
+    border-bottom: 2px solid #8B755A;
+    padding: 10px 0px;
+}
+.special-tag{
+    color: #8B755A;
+}
+.footer-link{}
+
+.menu {
+    margin-left: 75px;
+}
+.menu ul{ 
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu ul li {
+    float: left;
+    font-size: 18px;
+    padding: 10px 15px;
+    margin: 10px 5px;
+}
+.card-image{}
+
+.card-image img {
+    float: right;
+}
+.copyright-top{
+    border-bottom: 1px solid #8B755A;
+}
+.copyright-bottom{
+    border-top: 1px solid #8B755A;
+}

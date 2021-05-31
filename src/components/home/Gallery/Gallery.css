@@ -1,0 +1,25 @@
+.galleryTitle{
+    color: #232323;
+    font-size: 42px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.galleryContent {
+    background-color: #8B755A;
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+}
+.galleryContent img{
+    height: 273px;
+    width: 100%;
+}
+.galleryContent h4{
+    color: #fff;
+    margin-top: 19px;
+    font-family: "Poppins", sans-serif;
+
+}
+.galleryContent p{
+    color: #fff;
+}

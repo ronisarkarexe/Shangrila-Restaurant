@@ -1,29 +1,27 @@
-import React from 'react';
-import Home from '../components/home/Home/Home';
-import Reservations from '../components/home/Reservations/Reservations';
-import Review from '../components/home/Review/Review';
-import Header from '../Header/Header';
-
-import Footer from '../components/home/Footer/Footer';
-import Gallery from '../components/home/Gallery/Gallery';
-import Blogs from '../components/home/blogs/Blogs';
-import Shef from '../components/home/Shef/Shef';
-import { ourDeliciousData } from '../Sheared/Sheared';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import MainAdminPage from "../components/admin/MainAdminPage/MainAdminPage";
+import MainHomePage from '../components/home/mainHomePage/MainHomePage';
 
 const MainComponent = () => {
     return (
         <div>
-            <Header></Header>
-            <ourDeliciousData></ourDeliciousData>
-            <Home></Home>
-            <Gallery></Gallery>
-            <Blogs></Blogs>
-           
-       
-            <Shef></Shef>
-            <Reservations></Reservations>
-            <Review></Review>
-            <Footer></Footer>
+            <Router>
+                <switch>
+                    <Route exact path=''>
+                      <MainHomePage></MainHomePage>
+                    </Route>
+                    <Route  path='/admin'>
+                      <MainAdminPage></MainAdminPage>
+                    </Route>
+                </switch>
+            </Router>
+    
         </div>
     );
 }

@@ -14,7 +14,7 @@ const mapStateToProps = (state) => {
 const Blogs = (props) => {
     console.log('from blog',props);
     return (
-        <section className="blog pb-5">
+        <section id='blog' className="blog pb-5">
             <div className="container">
                 <div>
                     <h1 className="titleText">Blogs</h1>

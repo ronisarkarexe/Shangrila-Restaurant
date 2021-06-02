@@ -1,6 +1,13 @@
-import React from 'react';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 import { Nav , Navbar} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+
 
 const Header = () => {
    return (
@@ -15,9 +22,11 @@ const Header = () => {
                     <Nav.Link className="me-3 header-tex" as={Link} to="/reservation">Reservation</Nav.Link>
                     <Nav.Link className="me-3 header-tex" href="#link">Menu</Nav.Link>
                     <Nav.Link className="me-3 header-tex" href="#link">Gallery</Nav.Link>
-                    <Nav.Link className="me-3 header-tex" href="#link">Blog</Nav.Link>
+                    <Nav.Link className="me-3 header-tex" href="#blog">Blog</Nav.Link>
                     <Nav.Link className="me-3 header-tex" href="#link">Shop</Nav.Link>
                     <Nav.Link className="me-3 header-tex" href="#link">Contact</Nav.Link>
+                    <Nav.Link className="me-3 header-tex" href="/admin">Admin</Nav.Link>
+          
                 </Nav>
                 </Navbar.Collapse>
             </Navbar>
